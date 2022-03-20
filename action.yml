@@ -1,0 +1,33 @@
+name: 'Update Stack'
+description: 'Update cloufromation stack'
+inputs:
+  stack-id:  # id of input
+    description: 'Stack name or ARN to update'
+    required: true
+
+  # Only one of template-{file, url} may be specified
+  # if neither is specified, usePreviousTemplate is used.
+  template-file:
+    description: 'Template file to use'
+    required: false
+  template-url:
+    description: 'Template url to use'
+    required: false
+
+  wait-before:  # wait for stack to be stable before updating 
+    description: 'Wait for stack to be in an updatable state - will consume runner minutes'
+    required: false
+    default: false
+  wait-after:  # wait for stack to be stable after updating 
+    description: 'Wait for stack to be in an stable state after update - will consume runner minutes'
+    required: false
+    default: false
+
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
