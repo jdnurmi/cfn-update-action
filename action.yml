@@ -1,0 +1,18 @@
+name: 'Update Stack'
+description: 'Update cloufromation stack'
+inputs:
+  stack-id:  # id of input
+    description: 'Stack name or ARN to update'
+    required: true
+  wait:  # wait for stack update to complete
+    description: 'Wait for stack to update (or rollback) - will consume runner minutes'
+    required: true
+    default: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
