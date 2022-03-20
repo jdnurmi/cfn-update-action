@@ -100,7 +100,7 @@ or retrieved from the Validation stage - it cannot at this time be configured by
 
 ```yaml
 - name: Update Stack
-  uses: jdnurmi/cfn-update-action@master
+  uses: jdnurmi/cfn-update-action@main
   with:
     stack-id: MyStackName
     wait-before: true
