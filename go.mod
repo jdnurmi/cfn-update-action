@@ -1,4 +1,4 @@
-module github.com/jdnurmi/update-cfn
+module github.com/jdnurmi/cfn-update
 
 go 1.17
 
