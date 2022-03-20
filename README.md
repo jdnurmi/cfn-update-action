@@ -82,8 +82,6 @@ To enable updating the stack, you must add a second statement similar to:
             ],
             "Resource": "*"
         }
-    ]
-}
 ```
 
 This is because in a stack replacement scenario, it needs to know what Paramaters are still
